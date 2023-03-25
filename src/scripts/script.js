@@ -1,3 +1,8 @@
+//Wow.js
+new WOW({
+    animateClass: 'animate__animated',
+}).init();
+
 //Burger
 const menu = document.querySelector('.menu__body');
 const menuBtn = document.querySelector('.menu__icon');
@@ -207,4 +212,19 @@ const orderSuccess = document.querySelector('#order-success');
 
 orderIcon.addEventListener('click', function() {
     orderSuccess.style.display = 'none';
+});
+
+//Телефон
+let phoneNumberElement = document.querySelector(".number");
+phoneNumberElement.onclick = function() {
+    location.href = "tel:+7 (964) 837-73-74";
+};
+
+//Адрес
+let locationFooter = document.querySelector('.footer__place');
+
+locationFooter.addEventListener('click', function() {
+    let address = 'Нижний Новгород, Ильинская улица, 3';
+    // Перенаправляем пользователя на карту
+    window.location.href = 'https://www.google.com/maps/place/' + encodeURIComponent(address);
 });

@@ -34,7 +34,7 @@
     .main {
         .header,
         .welcome {
-            .paddingLeftRight;
+            .paddingLeftRight ();
         }
 
         .header {
@@ -43,7 +43,7 @@
     }
 
     .advantage {
-        .paddingLeftRight;
+        .paddingLeftRight ();
 
         .advantage__container {
             .advantage__number {
@@ -67,7 +67,7 @@
     }
 
     .slider {
-        .paddingLeftRight;
+        .paddingLeftRight ();
 
         .slider__items.slick-initialized.slick-slider.slick-dotted {
             max-width: 100%;
@@ -82,12 +82,20 @@
     .menu,
     .room,
     .order {
-        .paddingLeftRight;
+        .paddingLeftRight ();
+    }
+
+    .menu {
+        .menu__items {
+            .menu__item {
+                    margin: 0 auto 24px;
+            }
+        }
     }
 
     .bg-smoke {
         .review {
-            .paddingLeftRight;
+            .paddingLeftRight ();
 
             .review__items {
                 .slick-prev {
@@ -101,7 +109,7 @@
         }
 
         .footer {
-            .paddingLeftRight;
+            .paddingLeftRight ();
         }
     }
 }
@@ -140,7 +148,7 @@
     }
 
     .advantage {
-        .paddingLeftRight;
+        .paddingLeftRight ();
 
         .advantage__container {
             .advantage__number {
@@ -300,8 +308,7 @@
                             gap: 30px;
 
                             .menu__list-title {
-                                font-size: 16px;
-                                font-family: MuseoSansCyrl500, sans-serif;
+                                .fontFamilyMuseoSansCyrl ();
                                 color: @menu-list-title;
                                 margin-bottom: 4px;
                             }
@@ -457,7 +464,7 @@
             }
 
             .slick-dots {
-                bottom: -36px;
+                bottom: -34px;
             }
         }
     }
@@ -659,6 +666,10 @@
                         }
                     }
                 }
+
+                .order__button {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -682,13 +693,13 @@
                     max-width: 290px;
 
                     .slick-dots {
-                        bottom: -36px;
+                        bottom: -34px;
                     }
 
                     .review__item {
                         width: 290px;
                         height: 257px;
-                        padding: 21px 24px 38px 16px;
+                        padding: 17px 24px 38px 20px;
 
                         .review__guest {
                             .review__image {
@@ -697,6 +708,7 @@
                             }
 
                             .review__person {
+                                margin-left: 12px;
                                 .review__name {
                                     font-size: 17px;
                                 }
@@ -709,7 +721,7 @@
 
                         .review__text {
                             font-size: 14px;
-                            margin-left: 15px;
+                            margin-left: 11px;
                         }
                     }
                 }
@@ -717,5 +729,3 @@
         }
     }
 }
-
-@import "theme";
