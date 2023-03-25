@@ -117,7 +117,6 @@ orderList.forEach((dropdown, index) => {
     });
 });
 
-
 //Data
 let successData = document.querySelector('.success-data');
 let currentDate = new Date();

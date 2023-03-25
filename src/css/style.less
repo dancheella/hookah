@@ -623,6 +623,20 @@ body {
                         }
                     }
 
+                    .disabled {
+                        .blockFlex ();
+                        justify-content: center;
+                        .fontFamilyMuseoSansCyrl ();
+                        padding: 10px;
+                        border-radius: 5px;
+                        box-sizing: border-box;
+                        width: 79px;
+                        height: 38px;
+                        color: @input-color;
+                        border: 1px solid @input-color;
+                        cursor: not-allowed;
+                    }
+
                     &.menu-open {
                         .blockFlex ();
                         justify-content: flex-start;
