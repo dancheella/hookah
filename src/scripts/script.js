@@ -232,3 +232,11 @@ locationFooter.addEventListener('click', function () {
 const currentYear = new Date().getFullYear();
 const yearElement = document.querySelector('.current-year');
 yearElement.textContent = currentYear.toString();
+
+//Stop Video
+let slider = $('.slider');
+slider.on('beforeChange', function(){
+    let activeSlide = slider.find('.slick-active');
+    let videoIframe = activeSlide.find('iframe');
+    videoIframe[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+});
