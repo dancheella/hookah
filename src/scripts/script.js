@@ -126,7 +126,7 @@ let day = currentDate.getDate();
 successData.textContent = `${day}.${month}.${year}`;
 
 //Time
-$('.order__menu').on('click', function(event) {
+$('.order__menu').on('click', function (event) {
     $('.success-time').text(event.target.textContent);
 });
 
@@ -209,21 +209,26 @@ $('#order__button').click(function () {
 const orderIcon = document.querySelector('.order__icon');
 const orderSuccess = document.querySelector('#order-success');
 
-orderIcon.addEventListener('click', function() {
+orderIcon.addEventListener('click', function () {
     orderSuccess.style.display = 'none';
 });
 
 //Телефон
 let phoneNumberElement = document.querySelector(".number");
-phoneNumberElement.onclick = function() {
+phoneNumberElement.onclick = function () {
     location.href = "tel:+7 (964) 837-73-74";
 };
 
 //Адрес
 let locationFooter = document.querySelector('.footer__place');
 
-locationFooter.addEventListener('click', function() {
+locationFooter.addEventListener('click', function () {
     let address = 'Нижний Новгород, Ильинская улица, 3';
     // Перенаправляем пользователя на карту
     window.location.href = 'https://www.google.com/maps/place/' + encodeURIComponent(address);
 });
+
+//Year
+const currentYear = new Date().getFullYear();
+const yearElement = document.querySelector('.current-year');
+yearElement.textContent = currentYear.toString();
